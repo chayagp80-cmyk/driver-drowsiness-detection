@@ -26,6 +26,10 @@ def home():
 def portfolio():
     return render_template("portfolio.html")
 
+@app.route("/resume")
+def resume():
+    return render_template("resume.html")
+
 @app.route("/start", methods=['GET', 'POST'])
 def index():
     print(request.method)
