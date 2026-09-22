@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaya | Developer Portfolio</title>
+    <style>
+        :root {
+            --ink: #17212b;
+            --muted: #61707d;
+            --paper: #f5f0e8;
+            --cream: #fffaf1;
+            --coral: #e7654a;
+            --teal: #187c7b;
+            --line: #d9d0c4;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: var(--paper);
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        a { color: inherit; }
+        .wrap { width: min(1120px, calc(100% - 40px)); margin: auto; }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--line);
+            font-family: Arial, sans-serif;
+        }
+        .mark { font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+        nav a { text-decoration: none; color: var(--muted); margin-left: 24px; font-size: .9rem; }
+        nav a:hover { color: var(--coral); }
+        .hero {
+            display: grid;
+            grid-template-columns: 1.3fr .7fr;
+            gap: 64px;
+            align-items: end;
+            padding: 90px 0 110px;
+        }
+        .eyebrow { color: var(--coral); font: 700 .8rem Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+        h1 { max-width: 760px; margin: 18px 0; font-size: clamp(3.5rem, 9vw, 7.5rem); line-height: .88; letter-spacing: -.05em; font-weight: 500; }
+        .intro { max-width: 520px; color: var(--muted); font: 1.1rem/1.65 Arial, sans-serif; }
+        .stamp { padding: 28px; border: 1px solid var(--ink); background: var(--cream); transform: rotate(3deg); font-family: Arial, sans-serif; }
+        .stamp strong { display: block; color: var(--teal); font-size: 2.2rem; margin-bottom: 12px; }
+        section { padding: 64px 0; border-top: 1px solid var(--line); }
+        .section-title { display: flex; justify-content: space-between; gap: 20px; align-items: baseline; }
+        h2 { margin: 0 0 28px; font-size: 2.4rem; font-weight: 500; }
+        .section-title p { color: var(--muted); font: .85rem Arial, sans-serif; }
+        .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+        .project { min-height: 230px; padding: 28px; background: var(--cream); border: 1px solid var(--line); display: flex; flex-direction: column; justify-content: space-between; }
+        .project:nth-child(2) { background: var(--teal); color: white; border-color: var(--teal); }
+        .project:nth-child(3) { background: var(--coral); color: white; border-color: var(--coral); }
+        .project h3 { margin: 0 0 10px; font-size: 1.65rem; font-weight: 500; }
+        .project p { margin: 0; font: .95rem/1.5 Arial, sans-serif; opacity: .85; }
+        .tag { font: 700 .72rem Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+        .about { display: grid; grid-template-columns: .7fr 1.3fr; gap: 64px; }
+        .about p { margin: 0; max-width: 650px; color: var(--muted); font: 1.15rem/1.7 Arial, sans-serif; }
+        footer { padding: 36px 0 50px; display: flex; justify-content: space-between; color: var(--muted); font: .85rem Arial, sans-serif; }
+        @media (max-width: 700px) {
+            .hero, .about { grid-template-columns: 1fr; gap: 36px; padding: 60px 0 72px; }
+            .stamp { transform: none; }
+            .projects { grid-template-columns: 1fr; }
+            nav a { margin-left: 12px; }
+            footer { display: block; line-height: 2; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav>
+            <div class="mark">Chaya / Portfolio</div>
+            <div>
+                <a href="/">Detector</a>
+                <a href="https://github.com/chayagp80-cmyk/driver-drowsiness-detection" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+        </nav>
+
+        <main>
+            <header class="hero">
+                <div>
+                    <div class="eyebrow">Developer · Builder · Learner</div>
+                    <h1>Thoughtful tools for real-world problems.</h1>
+                    <p class="intro">I build practical software with a focus on computer vision, accessible interfaces, and projects that make technology feel useful.</p>
+                </div>
+                <aside class="stamp">
+                    <strong>01</strong>
+                    Featured work<br>
+                    Driver Drowsiness Detection
+                </aside>
+            </header>
+
+            <section>
+                <div class="section-title">
+                    <h2>Selected work</h2>
+                    <p>Recent projects and experiments</p>
+                </div>
+                <div class="projects">
+                    <article class="project">
+                        <div><span class="tag">Computer vision</span><h3>Drowsiness Detection</h3><p>Real-time eye and mouth analysis using OpenCV, dlib, EAR, and MAR signals.</p></div>
+                        <span class="tag">Python · Flask · OpenCV</span>
+                    </article>
+                    <article class="project">
+                        <div><span class="tag">Web experience</span><h3>Portfolio System</h3><p>A responsive personal space for documenting work, ideas, and technical growth.</p></div>
+                        <span class="tag">HTML · CSS · Flask</span>
+                    </article>
+                    <article class="project">
+                        <div><span class="tag">Data</span><h3>Signal Explorer</h3><p>Visual summaries of collected driver attention signals for review and experimentation.</p></div>
+                        <span class="tag">Python · Pandas · Matplotlib</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="about">
+                <h2>About</h2>
+                <p>I enjoy turning a rough idea into a working, understandable experience. My current work explores Python applications, computer vision, and the small design decisions that help people trust the tools they use.</p>
+            </section>
+        </main>
+
+        <footer>
+            <span>Available for thoughtful collaborations.</span>
+            <span>Built with Python and curiosity.</span>
+        </footer>
+    </div>
+</body>
+</html>

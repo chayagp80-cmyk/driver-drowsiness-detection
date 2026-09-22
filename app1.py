@@ -22,6 +22,10 @@ def home():
         # pass # unknown
         return render_template("index.html")
 
+@app.route("/portfolio")
+def portfolio():
+    return render_template("portfolio.html")
+
 @app.route("/start", methods=['GET', 'POST'])
 def index():
     print(request.method)
